@@ -9,16 +9,13 @@
 				</div> <!-- .twothirds -->
 				<div class="onethird">
 					<h4>Meet the Team</h4>
-					<p class="team-footer">
-						<img src="/images/team/thumbs/paddy.jpg" alt="Paddy Foran" />
-						<a style="color: #60727E;" href="/team/paddy" title="Paddy Foran's Profile">Paddy Foran</a>
-						<span>CEO</span>
+
+					{% for person in site.categories.team reversed %}<p class="team-footer">
+  					<img src="/images/team/thumbs/{{ person.slug }}.jpg" alt="{{ person.name.given }} {{ person.name.family }}" />
+	  				<a style="color: #60727E;" href="/team/{{ person.slug }}" title="{{ person.name.given }} {{ person.name.family }}'s Profile">{{ person.name.given }} {{ person.name.family }}</a>
+		  			<span>{{ person.position }}</span>
 					</p>
-					<p class="team-footer">
-						<img src="/images/team/thumbs/tino.jpg" alt="Tino Galizio" />
-						<a style="color: #60727E;" href="/team/tino" title="Tino Galizio's Profile">Tino Galizio</a>
-						<span>CFO</span>
-					</p>
+					{% endfor %}
 				</div> <!-- .onethird -->
 				<div id="copyright">
 					<p>Copyright &copy; 2010 Second Bit, LLC.</p>
