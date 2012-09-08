@@ -28,7 +28,7 @@
 			<div id="main-content-inner" class="inner-container{% if page.sidebar %} secondary-inner{% endif %}">
 				{% if page.sidebar %}<!-- Left Column -->
 				<div id="left-column" class="twothirds">
-					{{ page.content }}
+					{{ content }}
 				</div> <!-- #left-column -->
 
 				<!-- Right Column -->
@@ -36,7 +36,7 @@
 					{{ page.sidebar }}
 				</div> <!-- #right-column -->
 				{% else %}
-				{{ page.content }}
+				{{ content }}
 				{% endif %}
 			</div> <!-- #main-content-inner -->
 		</div> <!-- #main-content -->
