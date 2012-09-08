@@ -34,7 +34,7 @@
 						<li><strong>Website:</strong> <a href="{{ page.website.url }}" title="{{ page.website.title }}">{{ page.website.url }}</a></li>
 						<li><strong>Email:</strong> <a href="mailto:{{ page.email }}" title="Email {{ page.name.given }}">{{ page.email }}</a></li>
 					  <li><strong>Twitter:</em> <a href="https://www.twitter.com/{{ page.twitter }}" title="Follow {{ page.name.given }} {{ page.name.family }} on Twitter">@{{ page.twitter}}</a></li>
-					</ul>{% capture tagname %}author/{{ page.name.given }} {{ page.name.family }}{% endcapture %}{% if site.tags[tagname].first %}
+					</ul>{% capture tagname %}author/{{ page.slug }}{% endcapture %}{% if site.tags[tagname].first %}
 					<h2>Latest Post</h2>
 					<ul>
 						<li><a href="{{ site.tags[tagname].first.url }}">{{ site.tags[tagname].first.title }}</a></li>
