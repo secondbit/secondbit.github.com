@@ -18,6 +18,8 @@ categories:
 ---
 Paddy is the CEO and lead developer for Second Bit. He's in charge of making all of our products and projects work. As CEO, he steers the company's general direction, and is responsible for its ties to the [hacker ethic](http://en.wikipedia.org/wiki/Hacker_ethic).
 
+<!-- break -->
+
 ## Day Job
 
 Paddy's full-time employment is as a Developer Experience Engineer at [Iron.io](http://www.iron.io), a startup that builds services for developers building on the cloud. His duties there include documenting, creating tools, developer outreach, and generally insuring that developers enjoy using the services.
