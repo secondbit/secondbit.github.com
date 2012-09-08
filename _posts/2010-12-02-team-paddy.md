@@ -11,7 +11,6 @@ website:
   title: "Paddy's personal website"
 email: "paddy@secondbit.org"
 twitter: "paddyforan"
-image: "paddy.jpg"
 permalink: /team/paddy
 slug: paddy
 categories:
