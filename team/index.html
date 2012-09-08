@@ -3,12 +3,10 @@ title: Team
 subtitle: "Just let the classiness waft over you"
 layout: default
 sidebar: "<h2>It's a team effort.</h2>
-        <p>We like the term &quot;team&quot; over, say, &quot;staff&quot;, because it's a little more intimate, a little more expressive of the bond we share as we work with software. We like to think Second Bit is as much about the people as it is about the software, and we work hard to stay close and have fun as a team. It's hard to do great work when you're around people you whose company you don't genuinely enjoy, so we've made it a priority to work with only the most awesome people we can find.</p>
-        
-        <h2>Your picture here?</h2>
-        <p>Think you're pretty awesome? Think Second Bit sounds like a lot of fun? We definitely want to <a href=\"/contact\" title=\"Contact Us\">hear from you</a>. We may or may not be hiring at this point (it changes based on our mood at that particular moment), so get in touch. We're pretty fun to work with, we swear.</p>"
+<p>We like the term &quot;team&quot; over, say, &quot;staff&quot;, because it's a little more intimate, a little more expressive of the bond we share as we work with software. We like to think Second Bit is as much about the people as it is about the software, and we work hard to stay close and have fun as a team.</p>
+<p>It's hard to do great work when you're around people you whose company you don't genuinely enjoy, so we've made it a priority to work with only the most awesome people we can find.</p>"
 ---
-{% for person in site.categories.team %}
+{% for person in site.categories.team reversed %}
 <h2 style="clear: both;">
 	<a href="{{ person.url }}" title="Meet {{ person.name.given }} {{ person.name.family }}">{{ person.name.given }} {{ person.name.family }}</a>
 </h2>
