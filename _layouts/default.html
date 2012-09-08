@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr">
+
+{% include head.html %}
+	<body>
+{% include header.html %}
+		<!-- Subheader & Featured -->
+
+		<div id="subheader">
+			<div id="subheader-inner" class="inner-container {% if page.featured %}home-featured{% else %}page-title{% endif %}">
+				<h2>{% if page.featured %}{{ page.featured.title }}{% else %}{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ page.title }}{% endif %}{% endif %}</h2>{% if page.featured %}
+				<p class="featured-text">{{ page.featured.description }}</p>
+
+				<div class="featured-image">
+					<img src="/images/featured/{{ page.featured.image }}" alt="{{ page.featured.title }}" />
+				</div> <!-- .featured-image -->
+		
+				<a href="{{ page.featured.links.first.link }}" class="featured-btn view-project" title="{{ page.featured.links.first.title }}">{{ page.featured.links.first.text }}</a>
+				<a href="{{ page.featured.links.last.link }}" class="featured-btn" title="{{ page.featured.links.last.title }}">{{ page.featured.links.last.text }}</a>{% endif %}
+			</div> <!-- #subheader-inner -->
+		</div> <!-- #subheader -->
+
+		<!-- Content -->
+
+		<div id="main-content">
+			<div id="main-content-inner" class="inner-container{% if page.sidebar %} secondary-inner{% endif %}">
+				{% if page.sidebar %}<!-- Left Column -->
+				<div id="left-column" class="twothirds">
+					{{ page.content }}
+				</div> <!-- #left-column -->
+
+				<!-- Right Column -->
+				<div id="right-column" class="onethird">
+					{{ page.sidebar }}
+				</div> <!-- #right-column -->
+				{% else %}
+				{{ page.content }}
+				{% endif %}
+			</div> <!-- #main-content-inner -->
+		</div> <!-- #main-content -->
+{% include footer.html %}
+	</body>
+</html>

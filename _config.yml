@@ -1,0 +1,3 @@
+permalink: /blog/:title
+server: true
+pygments: true

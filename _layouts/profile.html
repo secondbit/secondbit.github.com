@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr">
+
+{% include head.html %}
+	<body>
+{% include header.html %}
+		<!-- Subheader & Featured -->
+
+		<div id="subheader">
+			<div id="subheader-inner" class="inner-container page-title">
+				<h2>Meet {{ page.name.given }} {{ page.name.family }}</h2>
+			</div> <!-- #subheader-inner -->
+		</div> <!-- #subheader -->
+
+		<!-- Content -->
+
+		<div id="main-content">
+			<div id="main-content-inner" class="inner-container secondary-inner">
+				<!-- Left Column -->
+				<div id="left-column" class="twothirds">
+					<h2>Introducing {{ page.name.given }}</h2>
+					{{ content }}
+				</div> <!-- #left-column -->
+
+				<!-- Right Column -->
+				<div id="right-column" class="onethird">
+					<img src="/images/team/sidebar/{{ page.image }}" title="{{ page.name.given }} {{ page.name.family }}" class="profile-picture" />
+					<h2>About {{ page.name.given }}</h2>
+					<ul>
+						<li><strong>Title:</strong> {{ page.position }}</li>
+						<li><strong>Joined Second Bit: {{ page.joined }}</li>
+						<li><strong>Website:</strong> <a href="{{ page.website.url }}" title="{{ page.website.title }}">{{ page.website.url }}</a></li>
+						<li><strong>Email:</strong> <a href="mailto:{{ page.email }}" title="Email {{ page.name.given }}">{{ page.email }}</a></li>
+					  <li><strong>Twitter:</em> <a href="https://www.twitter.com/{{ page.twitter }}" title="Follow {{ page.name.given }} {{ page.name.family }} on Twitter">@{{ page.twitter}}</a></li>
+					</ul>{% capture tagname %}author/{{ page.name.given }} {{ page.name.family }}{% endcapture %}{% if site.tags[tagname].first %}
+					<h2>Latest Post</h2>
+					<ul>
+						<li><a href="{{ site.tags[tagname].first.url }}">{{ site.tags[tagname].first.title }}</a></li>
+					</ul>{% endif %}
+				</div> <!-- #right-column -->
+			</div> <!-- #main-content-inner -->
+		</div> <!-- #main-content -->
+{% include footer.html %}
+	</body>
+</html>
