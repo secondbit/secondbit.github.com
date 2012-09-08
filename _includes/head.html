@@ -3,6 +3,8 @@
 
 		<title>Second Bit - {% if page.title %}{{ page.title }}{% else %}Untapped Potential{% endif %}</title>
 
+		{% if page.repo %}<meta name="go-import" content="secondbit.github.com{{ page.url }} git https://github.com/{{ page.repo }}">{% endif %}
+
 		<meta name="Author" content="author" />
 		<meta name="Description" content="desc" />
 		<meta name="Copyright" content="copyright" />
