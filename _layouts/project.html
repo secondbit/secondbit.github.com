@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr">
+
+{% include head.html %}
+	<body>
+{% include header.html %}
+		<!-- Subheader & Featured -->
+
+		<div id="subheader">
+			<div id="subheader-inner" class="inner-container page-title">
+				<h2>{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ page.title }}{% endif %}</h2>
+			</div> <!-- #subheader-inner -->
+		</div> <!-- #subheader -->
+
+		<!-- Content -->
+
+		<div id="main-content">
+			<div id="main-content-inner" class="inner-container secondary-inner">
+				<!-- Left Column -->
+				<div id="left-column" class="twothirds">
+					<h2>About {{ page.title }}</h2>
+					{{ content }}
+				</div> <!-- #left-column -->
+
+				<!-- Right Column -->
+				<div id="right-column" class="onethird">
+					{% if page.links %}{% unless page.links == empty %}<h2>Links</h2>
+					<ul>
+						{% for link in page.links %}
+						<li><a href="{{ link.url }}" title="{{ link.title }}">{{ link.title }}</a></li>{% endfor %}
+					</ul>{% endunless %}{% endif %}
+					{% if page.reviews %}{% unless page.reviews == empty %}<h2>Reviews</h2>
+					{% for review in page.reviews %}
+					<p>&quot;{{ review.quote }}&quot;<br />
+					<em class="reviewer">-- <a herf="{{ review.url }}" title="Read the review">{{ review.author }}</a></em></p>{% endfor %}{% endunless %}{% endif %}
+				</div> <!-- #right-column -->
+			</div> <!-- #main-content-inner -->
+		</div> <!-- #main-content -->
+{% include footer.html %}
+	</body>
+</html>
