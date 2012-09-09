@@ -34,7 +34,7 @@
 					{% if page.reviews %}{% unless page.reviews == empty %}<h2>Reviews</h2>
 					{% for review in page.reviews %}
 					<p>&quot;{{ review.quote }}&quot;<br />
-					<em class="reviewer">-- <a herf="{{ review.url }}" title="Read the review">{{ review.author }}</a></em></p>{% endfor %}{% endunless %}{% endif %}
+					<em class="reviewer">-- <a href="{{ review.url }}" title="Read the review">{{ review.author }}</a></em></p>{% endfor %}{% endunless %}{% endif %}
 				</div> <!-- #right-column -->
 			</div> <!-- #main-content-inner -->
 		</div> <!-- #main-content -->
