@@ -13,5 +13,5 @@ sidebar: "<h2>Free as in freedom</h2>
 ---
 {% for project in site.categories.projects %}
 <h2><a href="{{ project.url }}" title="More about {{ project.title }}">{{ project.title }}</a></h2>
-{{ project.content | split:"<!-- break -->" | first }}
+{% if project.summary %}{{ project.summary }}{% else %}{{ project.content | split:"<!-- break -->" | first }}{% endif %}
 {% endfor %}

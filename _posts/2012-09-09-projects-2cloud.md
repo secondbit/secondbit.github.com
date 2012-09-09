@@ -19,6 +19,9 @@ reviews:
   - quote: "There are two prevailing methods for migrating a website from your phone to your desktop display: You can retype the URL by hand (a big pain) or email the link to yourself (a smaller pain, but a pain nonetheless). Enter 2cloud, which beams sites directly from the Share Page menu in the Android browser to a Google Chrome window on your desktop."
     url: "http://www.wired.com/reviews/2011/12/2cloud-app/"
     author: "Kyle VanHemert of Wired"
+summary: "<p>2cloud is the most well-known and well-reviewed product that Second Bit has worked on yet. With tens of thousands of users from all over the world, it is by far the most-loved product we've ever released.</p>
+
+<p>2cloud helps to break down the barriers between devices. When using your Android phone, a couple of taps let you open any URL you like on your computer, instantly.</p>"
 ---
 2cloud is the most well-known and well-reviewed product that Second Bit has worked on yet. With tens of thousands of users from all over the world, it is by far the most-loved product we've ever released.
 
