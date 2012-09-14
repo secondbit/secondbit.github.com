@@ -30,10 +30,10 @@
 					<h2>About {{ page.name.given }}</h2>
 					<ul>
 						<li><strong>Title:</strong> {{ page.position }}</li>
-						<li><strong>Joined Second Bit: {{ page.joined }}</li>
+						<li><strong>Joined Second Bit</strong>: {{ page.joined }}</li>
 						<li><strong>Website:</strong> <a href="{{ page.website.url }}" title="{{ page.website.title }}">{{ page.website.url }}</a></li>
 						<li><strong>Email:</strong> <a href="mailto:{{ page.email }}" title="Email {{ page.name.given }}">{{ page.email }}</a></li>
-					  <li><strong>Twitter:</em> <a href="https://www.twitter.com/{{ page.twitter }}" title="Follow {{ page.name.given }} {{ page.name.family }} on Twitter">@{{ page.twitter}}</a></li>
+					  <li><strong>Twitter:</strong> <a href="https://www.twitter.com/{{ page.twitter }}" title="Follow {{ page.name.given }} {{ page.name.family }} on Twitter">@{{ page.twitter}}</a></li>
 					</ul>{% capture tagname %}author/{{ page.slug }}{% endcapture %}{% if site.tags[tagname].first %}
 					<h2>Latest Post</h2>
 					<ul>

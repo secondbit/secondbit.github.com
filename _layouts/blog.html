@@ -5,41 +5,52 @@
 
 {% include head.html %}
 	<body>
+	<div id="fb-root"></div>
 {% include header.html %}
 		<!-- Subheader & Featured -->
 
 		<div id="subheader">
 			<div id="subheader-inner" class="inner-container {% if page.featured %}home-featured{% else %}page-title{% endif %}">
-				<h2>{% if page.featured %}{{ page.featured.title }}{% else %}{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ page.title }}{% endif %}{% endif %}</h2>{% if page.featured %}
-				<p class="featured-text">{{ page.featured.description }}</p>
-
-				<div class="featured-image">
-					<img src="/images/featured/{{ page.featured.image }}" alt="{{ page.featured.title }}" />
-				</div> <!-- .featured-image -->
-		
-				<a href="{{ page.featured.links.first.link }}" class="featured-btn view-project" title="{{ page.featured.links.first.title }}">{{ page.featured.links.first.text }}</a>
-				<a href="{{ page.featured.links.last.link }}" class="featured-btn" title="{{ page.featured.links.last.title }}">{{ page.featured.links.last.text }}</a>{% endif %}
+				<h2>{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ page.title }}{% endif %}</h2>
 			</div> <!-- #subheader-inner -->
 		</div> <!-- #subheader -->
 
 		<!-- Content -->
 
 		<div id="main-content">
-			<div id="main-content-inner" class="inner-container{% if page.sidebar %} secondary-inner{% endif %}">
-				{% if page.sidebar %}<!-- Left Column -->
+			<div id="main-content-inner" class="inner-container secondary-inner">
+				<!-- Left Column -->
 				<div id="left-column" class="twothirds">
-					{{ page.content }}
+					{{ content }}
 				</div> <!-- #left-column -->
 
 				<!-- Right Column -->
 				<div id="right-column" class="onethird">
-					{{ page.sidebar }}
+					<h2>Like the Blog?</h2>
+					<p>Then keep up to speed! We post here when we feel we have something of substance to say (usually). We update our social media accounts more frequently, though. There are lots of ways to keep up to speed:</p>
+					<p><a href="https://www.twitter.com/secondbit" title="Second Bit on Twitter" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @secondbit</a></p>
+					<div class="fb-like-box" data-href="https://www.facebook.com/secondbit" data-width="240" data-show-faces="false" data-stream="false" data-header="false"></div>
+					<div class="g-plus" data-width="240" data-height="69" data-href="//plus.google.com/106917856720960747278" data-rel="publisher"></div>
+					<h2>How are we doing?</h2>
+					<p>Like what we post here? Think we should write about something else? Think we should shut up and get back to work? We want to hear your opinions! Feel free to drop by the <a href="/contact" title="Contact us">contact page</a> and use any of those fun ways to get a hold of us.</p>
 				</div> <!-- #right-column -->
-				{% else %}
-				{{ page.content }}
-				{% endif %}
 			</div> <!-- #main-content-inner -->
 		</div> <!-- #main-content -->
-{% include footer.html %}
+	{% include footer.html %}
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=355418237825847";
+  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 	</body>
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:fb="http://ogp.me/ns/fb#" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr">
+
+{% include head.html %}
+<body>
+	<div id="fb-root"></div>
+{% include header.html %}
+		<!-- Subheader & Featured -->
+
+		<div id="subheader">
+			<div id="subheader-inner" class="inner-container page-title">
+				<h2>{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ page.title }}{% endif %}</h2>
+			</div> <!-- #subheader-inner -->
+		</div> <!-- #subheader -->
+
+		<!-- Content -->
+
+		<div id="main-content">
+			<div id="main-content-inner" class="inner-container secondary-inner">
+				<!-- Left Column -->
+				<div id="left-column" class="twothirds post-content">
+					{{ content }}
+				</div> <!-- #left-column -->
+
+				<!-- Right Column -->
+				<div id="right-column" class="onethird">
+					<img src="/images/team/sidebar/{{ page.author.slug }}.jpg" title="{{ page.author.name }}" class="profile-picture" />
+					<div class="post-header">
+						Posted by <a href="/team/{{ page.author.slug }}" title="{{ page.author.name }}'s profile">{{ page.author.name }}</a> on {{ page.date | date:"%b %d, %Y" }}
+					</div>
+					<h2>Like the post?</h2>
+					<p>Tell the world about it! Look, we even made it easy for you.</p>
+					<div class="tweet-and-share"><p class="tweet-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="secondbit" data-related="secondbit" data-text="{{ page.title }}">Tweet</a></p><div class="g-plus" data-action="share" data-annotation="bubble" data-height="20"></div></div>
+					<p class="like-button"><fb:like layout="button_count" width="100" show_faces="false"></fb:like></p>
+					<h2>We're listening.</h2>
+					<p>If you have something to say, we want to hear it. You can get in touch via the <a href="/contact" title="Contact us">contact page</a>.</p>
+				</div> <!-- #right-column -->
+			</div> <!-- #main-content-inner -->
+		</div> <!-- #main-content -->
+		{% include footer.html %}
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=287197137963789";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	</body>
+</html>

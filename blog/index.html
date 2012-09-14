@@ -1,0 +1,14 @@
+---
+title: Our Blog
+subtitle: "Because we just can't shut up."
+layout: blog
+---
+{% for post in site.categories.posts %}
+<h2><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+<div class="post-header">
+	Posted by <a href="/team/{{ post.author.slug }}" title="{{ post.author.name }}'s profile">{{ post.author.name }}</a> on {{ post.date | date:"%B %d, %Y" }}
+</div>
+<div class="post-summary">
+	{% if post.summary %}{{ post.summary }}{% else %}{{ post.content | split:"<!-- break -->" | first }}{% endif %}
+</div>
+{% endfor %}

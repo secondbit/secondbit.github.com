@@ -70,6 +70,14 @@ a:hover {
 	text-decoration: underline;
 	}
 
+em      {
+	font-style: italic;
+}
+
+strong  {
+	font-weight: bold;
+}
+
 .inner-container {
 	margin: 0 auto;
 	width: 800px;
@@ -233,6 +241,10 @@ a:hover {
 	padding: 30px 0 5px;
 }
 
+.post-content p:first-child {
+	padding: 30px 0 5px !important;
+}
+
 #services li { margin-top: 30px; }
 
 #services li h3 {
@@ -338,4 +350,24 @@ a:hover {
 
 #right-column .profile-picture {
 	padding-top: 30px;
+	margin: 0 auto;
+	display: block;
+}
+
+#right-column .post-header {
+	text-align: center;
+	padding-top: 10px;
+}
+
+.tweet-button {
+	height: 20px;
+	display: inline-block;
+	text-indent: 0px;
+	margin: 0px;
+	padding: 0px;
+	vertical-align: baseline;
+}
+
+.like-button, .tweet-and-share {
+	text-align: center;
 }
