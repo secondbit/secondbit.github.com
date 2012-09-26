@@ -10,12 +10,12 @@
 				<div class="onethird">
 					<h4>Meet the Team</h4>
 
-					{% for person in site.categories.team reversed %}<p class="team-footer">
+					{% for person in site.categories.team reversed %}{% if person.include_in_footer %}<p class="team-footer">
   					<img src="/images/team/thumbs/{{ person.slug }}.jpg" alt="{{ person.name.given }} {{ person.name.family }}" />
 	  				<a style="color: #60727E;" href="/team/{{ person.slug }}" title="{{ person.name.given }} {{ person.name.family }}'s Profile">{{ person.name.given }} {{ person.name.family }}</a>
 		  			<span>{{ person.position }}</span>
 					</p>
-					{% endfor %}
+					{% endif %}{% endfor %}
 				</div> <!-- .onethird -->
 				<div id="copyright">
 					<p>Copyright &copy; 2010 Second Bit, LLC.</p>
