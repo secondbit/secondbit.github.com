@@ -8,10 +8,11 @@
 		<meta property="og:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ content | strip_html | truncatewords:50 }}{% endif %}" />
 		<meta name="Description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ content | strip_html | truncatewords:50 }}{% endif %}" />
 
-		<meta property="fb:page_id" content="161148213918886" />
+		<meta property="fb:app_id" content="287197137963789" />
 		
 		<link rel="image_src" href="/images/logo.png" />
 		{% if page.title %}<meta property="og:title" content="Second Bit" />{% endif %}
+		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://{{ site.domain }}{{ page.url }}{% capture url_last %}{{ page.url | split:"" | last }}{% endcapture %}{% if url_last != "/" %}{% capture url_last_word %}{{ page.url | split:"/" | last }}{% endcapture %}{% unless url_last_word contains "." %}{% unless url_last_word == site.domain %}/{% endunless %}{% endunless %}{% endif %}" />
 		<meta property="og:image" content="http://{{ site.domain }}/images/logo.png" />
 		<link rel="stylesheet" href="/style/main.css" type="text/css" media="screen" />
