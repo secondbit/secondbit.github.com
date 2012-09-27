@@ -12,7 +12,7 @@
 		
 		<link rel="image_src" href="/images/logo.png" />
 		<link rel="image_src" href="http://{{ site.domain }}{% if page.image %}{{ page.image }}{% else %}/images/logo.png{% endif %}" />
-		{% if page.title %}<meta property="og:title" content="Second Bit" />{% endif %}
+		{% if page.title %}<meta property="og:title" content="Second Bit{% if page.title %} - {{ page.title }}{% endif %}" />{% endif %}
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://{{ site.domain }}{{ page.url }}{% capture url_last %}{{ page.url | split:"" | last }}{% endcapture %}{% if url_last != "/" %}{% capture url_last_word %}{{ page.url | split:"/" | last }}{% endcapture %}{% unless url_last_word contains "." %}{% unless url_last_word == site.domain %}/{% endunless %}{% endunless %}{% endif %}" />
 		<meta property="og:image" content="http://{{ site.domain }}{% if page.image %}{{ page.image }}{% else %}/images/logo.png{% endif %}" />
