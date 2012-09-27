@@ -12,6 +12,7 @@ website:
 email: "paddy@secondbit.org"
 twitter: "paddyforan"
 permalink: /team/paddy
+image: "/images/team/sidebar/paddy.jpg"
 slug: paddy
 include_in_footer: true
 categories:

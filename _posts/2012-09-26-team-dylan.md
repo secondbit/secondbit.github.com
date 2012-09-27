@@ -13,6 +13,7 @@ email: "dylan@secondbit.org"
 twitter: "dstaley"
 permalink: /team/dylan
 slug: dylan
+image: "/images/team/sidebar/dylan.jpg"
 categories:
   - team
 ---
