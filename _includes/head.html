@@ -5,11 +5,10 @@
 
 		{% if page.repo %}<meta name="go-import" content="secondbit.org{{ page.url }} git https://github.com/{{ page.repo }}">{% endif %}
 
-		{% if page.summary %}<meta name="Description" content="{{ page.summary }}" />
-		<meta property="og:description" content="{{ page.summary }}" />{% endif %}
+		<meta property="og:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ content | strip_html | truncatewords:50 }}{% endif %}" />
+		<meta name="Description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ content | strip_html | truncatewords:50 }}{% endif %}" />
 
-		<meta property="fb:app_id" content="287197137963789" />
-		<meta property="fb:admins" content="paddyforan,tino.galizio" />
+		<meta property="fb:page_id" content="161148213918886" />
 		
 		<link rel="image_src" href="/images/logo.png" />
 		{% if page.title %}<meta property="og:title" content="Second Bit" />{% endif %}
