@@ -5,7 +5,8 @@
 
 		{% if page.repo %}<meta name="go-import" content="secondbit.org{{ page.url }} git https://github.com/{{ page.repo }}">{% endif %}
 
-		{% if page.summary %}<meta name="Description" content="{{ page.summary }}" />{% endif %}
+		{% if page.summary %}<meta name="Description" content="{{ page.summary }}" />
+		<meta property="og:description" content="{{ page.summary }}" />{% endif %}
 
 		<meta property="fb:app_id" content="287197137963789" />
 		<meta property="fb:admins" content="paddyforan,tino.galizio" />
