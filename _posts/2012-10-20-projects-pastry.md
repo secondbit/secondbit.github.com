@@ -17,6 +17,8 @@ Pastry is an implementation of the [Pastry distributed hash table](http://www.wi
 
 <!-- break -->
 
+Please [see our discussion about the future of pastry](https://github.com/secondbit/pastry/issues/7).
+
 ## Purpose
 
 Pastry does one thing, and it does it very well: it lets a cluster of servers become self-organising. That means servers can send messages between each other with no central hub, no single point of failure. Servers, referred to as Nodes, can simply announce their presence and begin passing messages with the rest of the group.
