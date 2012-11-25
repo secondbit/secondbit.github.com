@@ -29,7 +29,7 @@ Tino and I are big fans of [Extra Credits](http://penny-arcade.com/patv/show/ext
 
 Extra Credits gave us permission to use this image months ago, and I feel there is no better time than now.
 
-<p style="text-align: center;"><img src="http://www.secondbit.org/image/make-it-rain" alt="Make it rain!" /></p>
+<p style="text-align: center;"><img src="/images/posts/make-it-rain.png" alt="Make it rain!" /></p>
 
 ## The Window Must Always Be Left Open
 
