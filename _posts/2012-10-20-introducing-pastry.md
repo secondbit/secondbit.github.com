@@ -9,7 +9,9 @@ tags:
   - "author/paddy"
 layout: post
 ---
-We're really pleased to be open sourcing something we've been working on for a long time now: [Pastry](/pastry), an implementation of the [Pastry distributed hash table](http://en.wikipedia.org/wiki/Pastry_%28DHT%29) written entirely in [Go](http://www.golang.org). We're only comfortable calling it an "alpha release" right now, so you may not want to run any mission-critical software on it just yet, but it's ready to be kicked around a bit.
+**Update (11/27/12):** After some discussion, we've renamed the project from its original and ambiguous "Pastry" to "Wendy". This gives us a little more freedom to stray from the algorithm where appropriate and build things the way we'd like to without being misleading. The post below has been updated to reflect this change, but you're welcome to view the post in its original form [on Github](https://github.com/secondbit/secondbit.github.com/blob/72ca6736b9a4d3e8cb30998ef6ac1ac57599b95b/_posts/2012-10-20-introducing-pastry.md). Please [see the blog post](/blog/pastry-is-now-wendy) for more information.
+
+We're really pleased to be open sourcing something we've been working on for a long time now: [Wendy](/wendy), an implementation of the [Pastry distributed hash table](http://en.wikipedia.org/wiki/Pastry_%28DHT%29) written entirely in [Go](http://www.golang.org). We're only comfortable calling it an "alpha release" right now, so you may not want to run any mission-critical software on it just yet, but it's ready to be kicked around a bit.
 
 <!-- break -->
 
@@ -31,30 +33,30 @@ So we set out to build our own.
 
 ## A Really Badass Lego
 
-Pastry, on its own, doesn't solve this problem for us. Pastry is really good at one thing: making servers self-organising. As a distributed hash table, Pastry helps your application quickly and efficiently route messages amongst any number of servers. The problem is, it's not multi-cast; a message will only get delivered to a single Node. What happens if we have multiple WebSocket servers, or the message gets delivered to an API server? That's no good.
+Wendy, on its own, doesn't solve this problem for us. Wendy is really good at one thing: making servers self-organising. As a distributed hash table, Wendy helps your application quickly and efficiently route messages amongst any number of servers. The problem is, it's not multi-cast; a message will only get delivered to a single Node. What happens if we have multiple WebSocket servers, or the message gets delivered to an API server? That's no good.
 
 But it does take care of that whole "sending messages" thing.
 
-The cool thing is, Pastry isn't just a package on its own; it can be built on. We supply [an interface](http://go.pkgdoc.org/secondbit.org/pastry#Application) that you can fill in your own applications to receive callbacks from Pastry when significant events in the cluster happen.
+The cool thing is, Wendy isn't just a package on its own; it can be built on. We supply [an interface](http://go.pkgdoc.org/secondbit.org/wendy#Application) that you can fill in your own applications to receive callbacks from Wendy when significant events in the cluster happen.
 
 Our next project is a package (codenamed Peter) that will handle the publishing and subscribing aspects, which will finally solve our problem.
 
 ## Open Source
 
-We love open source, so Pastry is licensed under the permissive [MIT License](http://opensource.org/licenses/MIT). Use it, abuse it, do what you will with it. Just please don't sue us.
+We love open source, so Wendy is licensed under the permissive [MIT License](http://opensource.org/licenses/MIT). Use it, abuse it, do what you will with it. Just please don't sue us.
 
-If you'd like to contribute, we love you. There's [information in the README](https://github.com/secondbit/pastry#contributing) about how to do that. It's pretty straight-forward: fork us, modify the source, go fmt it (like a good little Gopher), and send us a pull request. Not so bad, right?
+If you'd like to contribute, we love you. There's [information in the README](https://github.com/secondbit/wendy#contributing) about how to do that. It's pretty straight-forward: fork us, modify the source, go fmt it (like a good little Gopher), and send us a pull request. Not so bad, right?
 
-If you notice something wrong with Pastry, run into a bug, or have a suggestion, we'd love it if you'd [open an issue](https://github.com/secondbit/pastry/issues/new). We like pull requests more, but issues are awesome, too.
+If you notice something wrong with Wendy, run into a bug, or have a suggestion, we'd love it if you'd [open an issue](https://github.com/secondbit/wendy/issues/new). We like pull requests more, but issues are awesome, too.
 
 ## Get Go-ing
 
 We had to make at least one Go pun.
 
-You can get Pastry in a way that should be familiar to any Go user by now: run "go get secondbit.org/pastry" on your commandline. Yes, we used a vanity URL. Sue us.
+You can get Wendy in a way that should be familiar to any Go user by now: run "go get secondbit.org/wendy" on your commandline. Yes, we used a vanity URL. Sue us.
 
-You can find the [source](https://github.com/secondbit/pastry) on Github. You'll see some [instructions](https://github.com/secondbit/pastry/#use) on how to use it in the README.
+You can find the [source](https://github.com/secondbit/wendy) on Github. You'll see some [instructions](https://github.com/secondbit/wendy/#use) on how to use it in the README.
 
-We're really excited to be releasing Pastry today, even in this alpha form. Feel free to [let us know what you think](/contact). We'd love to hear from you.
+We're really excited to be releasing Wendy today, even in this alpha form. Feel free to [let us know what you think](/contact). We'd love to hear from you.
 
 ![Distribute ALL the things!](/images/posts/distribute-all-the-things.jpg)
