@@ -10,7 +10,7 @@
 
 		<div id="subheader">
 			<div id="subheader-inner" class="inner-container page-title">
-				<h2>Meet {{ page.name.given }} {{ page.name.family }}</h2>
+				<h2>{% if page.left %}Our Old Friend{% else %}Meet{% endif %} {{ page.name.given }} {{ page.name.family }}</h2>
 			</div> <!-- #subheader-inner -->
 		</div> <!-- #subheader -->
 
@@ -20,7 +20,7 @@
 			<div id="main-content-inner" class="inner-container secondary-inner">
 				<!-- Left Column -->
 				<div id="left-column" class="twothirds">
-					<h2>Introducing {{ page.name.given }}</h2>
+					<h2>{% if page.left %}Our Old Friend{% else %}Introducing{% endif %} {{ page.name.given }}</h2>
 					{{ content }}
 				</div> <!-- #left-column -->
 
@@ -29,13 +29,14 @@
 					<img src="/images/team/sidebar/{{ page.slug }}.jpg" title="{{ page.name.given }} {{ page.name.family }}" class="profile-picture" />
 					<h2>About {{ page.name.given }}</h2>
 					<ul>
-						<li><strong>Title:</strong> {{ page.position }}</li>
+						<li><strong>{% if page.left %}Previous {% endif %}Title:</strong> {{ page.position }}</li>
 						<li><strong>Joined Second Bit</strong>: {{ page.joined }}</li>
+						{% if page.left %}<li><strong>Left Second Bit</strong>: {{ page.left }}</li>{% endif %}
 						<li><strong>Website:</strong> <a href="{{ page.website.url }}" title="{{ page.website.title }}">{{ page.website.url }}</a></li>
-						<li><strong>Email:</strong> <a href="mailto:{{ page.email }}" title="Email {{ page.name.given }}">{{ page.email }}</a></li>
+						{% unless page.left %}<li><strong>Email:</strong> <a href="mailto:{{ page.email }}" title="Email {{ page.name.given }}">{{ page.email }}</a></li>{% endunless %}
 					  <li><strong>Twitter:</strong> <a href="https://www.twitter.com/{{ page.twitter }}" title="Follow {{ page.name.given }} {{ page.name.family }} on Twitter">@{{ page.twitter}}</a></li>
 					</ul>{% capture tagname %}author/{{ page.slug }}{% endcapture %}{% if site.tags[tagname].first %}
-					<h2>Latest Post</h2>
+					<h2>La{% unless page.left %}te{% endunless %}st Post</h2>
 					<ul>
 						<li><a href="{{ site.tags[tagname].first.url }}">{{ site.tags[tagname].first.title }}</a></li>
 					</ul>{% endif %}

@@ -1,0 +1,17 @@
+---
+title: Alumni
+subtitle: "Remembering our roots"
+layout: default
+sidebar: "<h2>You can never leave.</h2>
+<p>We have a habit of working with the people that are important to us. People aren't important to us because we work together, we work together because people are important to us. We really enjoy making things with people that we genuinely like.</p>
+
+<p>Sometimes, though, opportunities come up, adventures rear their heads, and life gets in the way. So we have to stop making things with those people we love, and let them go off on their own. It's always sad to see them go, but we're happy they're following their hearts. And while we may no longer be making things with them, we still love these people dearly.</p>
+
+<p>This page is for them. The people that helped shape Second Bit, who made it what it is, but sadly are no longer with us. They're not part of the team, but they deserve to be remembered, anyways.</p>"
+---
+{% for person in site.categories.alums reversed %}
+<h2 style="clear: both;">
+	<a href="{{ person.url }}" title="Our Old Friend {{ person.name.given }} {{ person.name.family }}">{{ person.name.given }} {{ person.name.family }}</a>
+</h2>
+<p><img src="/images/team/index/{{ person.slug }}.png" style="float: left; padding-right: 10px; padding-bottom: 10px; clear: both;" />{{ person.content  | split:"<!-- break -->" | first | remove_first:"<p>" }}
+{% endfor %}

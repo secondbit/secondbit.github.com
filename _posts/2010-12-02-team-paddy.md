@@ -4,7 +4,7 @@ name:
   given: "Paddy"
   family: "Foran"
 title: "Meet Paddy Foran"
-position: "CEO"
+position: "Lead Developer"
 joined: "December 2nd, 2010"
 website:
   url: "http://paddy.io"
@@ -18,7 +18,7 @@ include_in_footer: true
 categories:
   - team
 ---
-Paddy is the CEO and lead developer for Second Bit. He's in charge of making all of our products and projects work. As CEO, he steers the company's general direction, and is responsible for its ties to the [hacker ethic](http://en.wikipedia.org/wiki/Hacker_ethic).
+Paddy is the lead developer for Second Bit. He's in charge of making all of our products and projects work. As a founder, he steers the company's general direction, and is responsible for its ties to the [hacker ethic](http://en.wikipedia.org/wiki/Hacker_ethic).
 
 <!-- break -->
 

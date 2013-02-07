@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir="ltr">
+
+{% include head.html %}
+	<body>
+{% include header.html %}
+		<!-- Subheader & Featured -->
+
+		<div id="subheader">
+			<div id="subheader-inner" class="inner-container page-title">
+				<h2>Redirecting...</h2>
+			</div> <!-- #subheader-inner -->
+		</div> <!-- #subheader -->
+
+		<!-- Content -->
+
+		<div id="main-content">
+			<div id="main-content-inner" class="inner-container secondary-inner">
+				<!-- Left Column -->
+				<div id="left-column" class="twothirds">
+					<h2>This page has moved.</h2>
+					<p>This page has moved to <a href="{{ page.destination }}">{{ page.destination }}</a>. You will be redirected there in a moment.</p>
+				</div> <!-- #left-column -->
+
+				<!-- Right Column -->
+				<div id="right-column" class="onethird">
+				</div> <!-- #right-column -->
+			</div> <!-- #main-content-inner -->
+		</div> <!-- #main-content -->
+		{% include footer.html %}
+		<script type="text/javascript">
+			window.location.href = '{{ page.destination }}';
+		</script>
+	</body>
+</html>
+
