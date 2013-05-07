@@ -18,6 +18,6 @@ Shipped is a very bare-bones, minimal client for [App.net](http://app.net). It d
 
 It&apos;s really easy to get caught up in being *busy* without actually being *productive*. Shipped was created to help us measure how much we were actually getting done each day, with the theory being that once we start to measure our productivity, our productivity will increase.
 
-Paddy&apos;s eponoymous App.net account for this can be followed [here](http://alpha.app.net/shipped) if you&apos;re interested in keeping up with what he&apos;s doing every day.
+Paddy&apos;s eponymous App.net account for this can be followed [here](http://alpha.app.net/shipped) if you&apos;re interested in keeping up with what he&apos;s doing every day.
 
 To install Shipped, simply run `go get secondbit.org/shipped` (making sure your $GOPATH/bin folder is part of your PATH) and then run the `shipped` command. After setting up your access token the first time the program is run, you can write a brief message about what you did that will be posted to App.net. Every time you accomplish something during the day, take a couple seconds to ship it. You&apos;ll have a running log of everything you&apos;ve done.
