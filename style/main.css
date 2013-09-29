@@ -371,3 +371,7 @@ strong  {
 .like-button, .tweet-and-share {
 	text-align: center;
 }
+
+.subscription-button {
+  font-size: 20px;
+}

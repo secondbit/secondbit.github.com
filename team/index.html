@@ -12,5 +12,5 @@ sidebar: "<h2>A sleeping giant</h2>
 <h2 style="clear: both;">
 	<a href="{{ person.url }}" title="Meet {{ person.name.given }} {{ person.name.family }}">{{ person.name.given }} {{ person.name.family }}</a>
 </h2>
-<p><img src="/images/team/index/{{ person.slug }}.png" style="float: left; padding-right: 10px; padding-bottom: 10px; clear: both;" />{{ person.content  | split:"<!-- break -->" | first | remove_first:"<p>" }}
+<p><img src="/images/team/index/{{ person.slug }}.png" style="float: left; padding-right: 10px; padding-bottom: 10px; clear: both;" />{{ person.excerpt | markdownify | remove_first:"<p>" }}
 {% endfor %}

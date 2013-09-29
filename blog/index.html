@@ -9,6 +9,6 @@ layout: blog
 	Posted by <a href="/team/{{ post.author.slug }}" title="{{ post.author.name }}'s profile">{{ post.author.name }}</a> on {{ post.date | date:"%B %d, %Y" }}
 </div>
 <div class="post-summary">
-	{% if post.summary %}{{ post.summary }}{% else %}{{ post.content | split:"<!-- break -->" | first }}{% endif %}
+	{% if post.summary %}{{ post.summary }}{% else %}{{ post.excerpt | markdownify }}{% endif %}
 </div>
 {% endfor %}

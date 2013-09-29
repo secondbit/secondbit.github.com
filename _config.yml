@@ -2,3 +2,4 @@ permalink: /blog/:title
 server: true
 pygments: true
 domain: secondbit.org
+excerpt_separator: "<!-- break -->"
