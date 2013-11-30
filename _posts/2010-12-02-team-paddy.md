@@ -24,7 +24,7 @@ Paddy is the lead developer for Second Bit. He's in charge of making all of our 
 
 ## Day Job
 
-Paddy's full-time employment is as a Developer Experience Engineer at [Iron.io](http://www.iron.io), a startup that builds services for developers building on the cloud. His duties there include documenting, creating tools, developer outreach, and generally ensuring that developers enjoy using the services.
+Paddy&rsquo;s full-time employment is as a Software Engineer at DramaFever, a video streaming service for international content. This is what he does in his free time.
 
 ## Tech Specs
 
