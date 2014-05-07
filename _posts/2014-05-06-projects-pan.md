@@ -9,6 +9,6 @@ repo: secondbit/pan
 unlisted: true
 summary: "<p>This project is under active development.</p>"
 ---
-This project is still under active development.
+<strong>This project is still under active development.</strong>
 
 pan is an SQL generator for Go, written in collaboration with [DramaFever](http://www.dramafever.com).
